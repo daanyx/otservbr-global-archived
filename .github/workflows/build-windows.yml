@@ -1,6 +1,6 @@
 ---
 
-name: Build on Windows1
+name: Build on Windows
 
 on: [push, pull_request]
 
