@@ -46,6 +46,7 @@ jobs:
           useVcpkgToolchainFile: true
           buildWithCMake: true
           cmakeBuildType: ${{ matrix.buildtype }}
+          cmakeAppendedArgs: '--verbose'
 
       - name: Copy artifacts
         if: ${{ matrix.buildtype == 'Release' && github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/test' }}
