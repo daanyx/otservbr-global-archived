@@ -55,7 +55,7 @@ jobs:
 
       - name: Create and Upload Full Datapack
         if: ${{ matrix.buildtype == 'Release' && github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/test' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: otbr-full-${{ matrix.os }}-${{ matrix.buildtype }}-${{ github.sha }}
           path: |
@@ -76,7 +76,7 @@ jobs:
 
       - name: Create and Upload Server Only
         if: ${{ matrix.buildtype == 'Release' && github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/test' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: otbr-server-only-${{ matrix.os }}-${{ matrix.buildtype }}-${{ github.sha }}
           path: |
